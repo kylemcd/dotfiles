@@ -186,21 +186,10 @@ gtype() {
     $GREEN gbrk$NORMAL — ‼️ BREAKING"
 }
 
-# Git Status
-# gs() {
-#     gs "git status"
-# }
-
-# # Git Add
-# ga() {
-#     ga "git add"
-# }
-#
-# # Git Push
-# gp() {
-#     gp "git push"
-# }
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Get Local IP
+alias localip="ipconfig getifaddr en0"
+alias publicip="curl ifconfig.me"
