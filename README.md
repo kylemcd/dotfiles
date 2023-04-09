@@ -1,5 +1,10 @@
 # Things Needed For Setup
 
+# Install ripgrep
+```
+brew install ripgrep
+```
+
 ## Linking .zshrc file
 ```
 ln -s ~/dotfiles/oh-my-zsh/zshrc ~/.zshrc
