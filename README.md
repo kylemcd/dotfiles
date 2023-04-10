@@ -1,10 +1,23 @@
 # Things Needed For Setup
 
-# Install ripgrep
+# Prerequisites
+## Install NeoVim
+```
+brew install neovim
+```
+
+## Install ripgrep
 ```
 brew install ripgrep
 ```
 
+## Install Oh-My-Zsh
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+```
+
+# After Installation 
 ## Linking .zshrc file
 ```
 ln -s ~/dotfiles/oh-my-zsh/zshrc ~/.zshrc
