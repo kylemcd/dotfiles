@@ -31,7 +31,18 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 ```
 brew install zoxide
+```
 
+# Install tmux
+
+```
+brew install tmux
+```
+
+# Install tmuxinator
+
+```
+brew install tmuxinator
 ```
 
 # After Installation
@@ -46,6 +57,12 @@ ln -s ~/dotfiles/oh-my-zsh/zshrc ~/.zshrc
 
 ```
 ln -s ~/dotfiles/nvim ~/.config/nvim
+```
+
+## Linking tmux config
+
+```
+ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 
 ## ZSH Theme & Plugins

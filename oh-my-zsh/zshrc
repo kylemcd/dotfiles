@@ -197,3 +197,10 @@ alias publicip="curl ifconfig.me"
 # Zodxide
 eval "$(zoxide init zsh)"
 
+# tmuxinator
+export EDITOR='vim'
+alias fn="tmuxinator start foxtrot-next"
+alias bb="tmuxinator start backbone-client"
+alias qs="tmuxinator start quickstep"
+
+
