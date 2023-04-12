@@ -45,6 +45,12 @@ brew install tmux
 brew install tmuxinator
 ```
 
+# Install TPM
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/dotfiles/tmux/plugins
+```
+
 # After Installation
 
 ## Linking .zshrc file
