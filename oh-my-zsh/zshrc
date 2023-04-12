@@ -199,8 +199,12 @@ eval "$(zoxide init zsh)"
 
 # tmuxinator
 export EDITOR='vim'
+
+# tmuxinator work
 alias fn="tmuxinator start foxtrot-next"
 alias bb="tmuxinator start backbone-client"
 alias qs="tmuxinator start quickstep"
 
+# tmuxinator personal
+alias ps="tmuxinator start personal-site"
 
