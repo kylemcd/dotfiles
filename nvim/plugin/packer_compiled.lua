@@ -199,6 +199,11 @@ _G.packer_plugins = {
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-rg"] = {
+    loaded = true,
+    path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/nvim-rg",
+    url = "https://github.com/duane9/nvim-rg"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/kyle/.local/share/nvim/site/pack/packer/start/nvim-treesitter",

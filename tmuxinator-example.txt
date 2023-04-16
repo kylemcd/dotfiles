@@ -1,0 +1,14 @@
+name: Project
+root: ~/Projects/path/to/project
+
+startup_pane: 3
+
+windows:
+  - editor:
+      panes:
+        - vim
+  - terminal:
+      layout: even-horizontal
+      panes:
+        - npm run dev
+        -

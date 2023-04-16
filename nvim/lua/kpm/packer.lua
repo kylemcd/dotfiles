@@ -126,4 +126,6 @@ return require("packer").startup(function(use)
 
 	use("jremmen/vim-ripgrep")
 	use("f-person/git-blame.nvim")
+
+	use("duane9/nvim-rg")
 end)
