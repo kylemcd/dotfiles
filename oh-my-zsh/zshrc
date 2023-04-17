@@ -210,3 +210,6 @@ alias ps="tmuxinator start personal-site"
 
 # deploy
 alias fndep="cd ~/Projects/foxtrot-next && gh workflow run 54226109"
+alias fndepsil="cd ~/Projects/foxtrot-next && gh workflow run 54323308"
+
+export PATH=$PATH:$HOME/.maestro/bin
