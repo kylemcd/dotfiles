@@ -19,6 +19,7 @@ vim.cmd.packadd("packer.nvim")
 return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
+	use("nvim-lua/plenary.nvim")
 
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -128,4 +129,34 @@ return require("packer").startup(function(use)
 	use("f-person/git-blame.nvim")
 
 	use("duane9/nvim-rg")
+
+	-- PR Reviewer
+	use({
+		"pwntester/octo.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"kyazdani42/nvim-web-devicons",
+		},
+		config = function()
+			require("octo").setup()
+		end,
+	})
+
+	-- Git Auto completion
+	use({
+		"petertriho/cmp-git",
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			require("cmp").setup({
+				sources = {
+					{ name = "git" },
+				},
+			})
+
+			require("cmp_git").setup()
+		end,
+	})
 end)
