@@ -169,6 +169,16 @@ gtst() {
     gcap "🤖 TEST: $@"
 }
 
+# CHORE.
+gchr() {
+    gcap "🧼 CHORE: $@"
+}
+
+# FEATURE.
+gfea() {
+    gcap "✨ FEATURE: $@"
+}
+
 # BREAKING CHANGE.
 gbrk() {
     gcap "‼️ BREAKING: $@"
