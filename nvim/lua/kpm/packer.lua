@@ -29,12 +29,21 @@ return require("packer").startup(function(use)
 	})
 
 	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
+		"olivercederborg/poimandres.nvim",
 		config = function()
-			vim.cmd("colorscheme rose-pine")
+			require("poimandres").setup({
+				vim.cmd("colorscheme poimandres"),
+			})
 		end,
 	})
+
+	-- use({
+	-- 	"rose-pine/neovim",
+	-- 	as = "rose-pine",
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme rose-pine")
+	-- 	end,
+	-- })
 
 	use({
 		"folke/trouble.nvim",
