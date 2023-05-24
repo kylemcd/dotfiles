@@ -217,6 +217,7 @@ alias qs="tmuxinator start quickstep"
 
 # tmuxinator personal
 alias ps="tmuxinator start personal-site"
+alias css="tmuxinator start interunit-css"
 
 # deploy
 alias fndep="cd ~/Projects/foxtrot-next && gh workflow run 54226109"
