@@ -225,3 +225,7 @@ alias fndepsil="cd ~/Projects/foxtrot-next && gh workflow run 54323308"
 
 export PATH=$PATH:$HOME/.maestro/bin
 export GPG_TTY=$(tty)
+
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH"
+alias adb='/Users/$USER/Library/Android/sdk/platform-tools/adb'
