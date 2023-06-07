@@ -10,7 +10,7 @@ end
 -- for conciseness
 local formatting = null_ls.builtins.formatting -- to setup formatters
 
-local eslint = require("null-ls").builtins.diagnostics.eslint.with({
+local eslint_d = require("null-ls").builtins.diagnostics.eslint_d.with({
 	cwd = h.cache.by_bufnr(function(params)
 		return u.root_pattern(
 			".eslintrc",
@@ -34,8 +34,7 @@ null_ls.setup({
 		--  "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
-		formatting.eslint_d, -- eslint formatter
-		eslint,
+		eslint_d,
 	},
 
 	-- configure format on save
