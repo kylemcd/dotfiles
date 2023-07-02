@@ -10,7 +10,7 @@ end
 -- for conciseness
 local formatting = null_ls.builtins.formatting -- to setup formatters
 
-local eslint_d = require("null-ls").builtins.diagnostics.eslint_d.with({
+local eslint_d_diagnostics = require("null-ls").builtins.diagnostics.eslint_d.with({
 	cwd = h.cache.by_bufnr(function(params)
 		return u.root_pattern(
 			".eslintrc",
@@ -32,9 +32,10 @@ null_ls.setup({
 	sources = {
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
-		formatting.prettier, -- js/ts formatter
+		formatting.prettierd, -- js/ts formatter
 		formatting.stylua, -- lua formatter
-		eslint_d,
+		formatting.eslint_d, -- eslint_d formatter
+		eslint_d_diagnostics, -- eslint_d linter
 	},
 
 	-- configure format on save
@@ -46,7 +47,7 @@ null_ls.setup({
 				buffer = bufnr,
 				callback = function()
 					vim.lsp.buf.format({
-                        async = true,
+						async = true,
 						filter = function(client)
 							--  only use null-ls for formatting instead of lsp server
 							return client.name == "null-ls"
