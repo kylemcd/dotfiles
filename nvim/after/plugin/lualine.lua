@@ -31,6 +31,6 @@ local new_colors = {
 -- configure lualine with modified theme
 lualine.setup({
 	options = {
-		theme = "poimandres",
+		theme = "night-owl",
 	},
 })

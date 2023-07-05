@@ -1,9 +1,9 @@
-require("poimandres").setup({
-	disable_background = true,
-})
+-- require("poimandres").setup({
+-- 	disable_background = true,
+-- })
 
 function ColorMyPencils(color)
-	color = color or "poimandres"
+	color = color or "night-owl"
 	vim.cmd.colorscheme(color)
 	vim.cmd("hi Comment  guifg=#FFFAC2")
 	vim.cmd("hi Question  guifg=#506477")

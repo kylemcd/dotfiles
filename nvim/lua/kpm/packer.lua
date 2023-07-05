@@ -32,10 +32,10 @@ return require("packer").startup(function(use)
 
 	-- Visuals
 	use({
-		"olivercederborg/poimandres.nvim",
+		"oxfist/night-owl.nvim",
 		config = function()
-			require("poimandres").setup({
-				vim.cmd("colorscheme poimandres"),
+			require("night-owl").setup({
+				vim.cmd("colorscheme night-owl"),
 			})
 		end,
 	})
@@ -59,7 +59,6 @@ return require("packer").startup(function(use)
 		"j-hui/fidget.nvim",
 		tag = "legacy",
 	})
-
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
