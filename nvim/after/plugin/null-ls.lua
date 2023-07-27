@@ -10,7 +10,7 @@ end
 -- for conciseness
 local formatting = null_ls.builtins.formatting -- to setup formatters
 
-local eslint_d_diagnostics = require("null-ls").builtins.diagnostics.eslint_d.with({
+local eslint_d_diagnostics = require("null-ls").builtins.diagnostics.eslint.with({
 	cwd = h.cache.by_bufnr(function(params)
 		return u.root_pattern(
 			".eslintrc",
@@ -24,7 +24,19 @@ local eslint_d_diagnostics = require("null-ls").builtins.diagnostics.eslint_d.wi
 })
 
 -- to setup format on save
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+-- local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
+-- local on_attach = function(_, bufnr)
+-- 	vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
+-- 		vim.lsp.buf.format({
+-- 			bufnr = bufnr,
+-- 			filter = function(client)
+-- 				return client.name == "null-ls"
+-- 			end,
+-- 		})
+-- 		print("File formatted")
+-- 	end, { desc = "Format current buffer with LSP" })
+-- end
 
 -- configure null_ls
 null_ls.setup({
@@ -32,30 +44,9 @@ null_ls.setup({
 	sources = {
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
-		formatting.prettierd, -- js/ts formatter
+		formatting.prettier, -- js/ts formatter
+		formatting.eslint, -- eslint formatter
 		formatting.stylua, -- lua formatter
-		formatting.eslint_d, -- eslint_d formatter
 		eslint_d_diagnostics, -- eslint_d linter
 	},
-
-	-- configure format on save
-	on_attach = function(current_client, bufnr)
-		if current_client.supports_method("textDocument/formatting") then
-			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				group = augroup,
-				buffer = bufnr,
-				callback = function()
-					vim.lsp.buf.format({
-						async = true,
-						filter = function(client)
-							--  only use null-ls for formatting instead of lsp server
-							return client.name == "null-ls"
-						end,
-						bufnr = bufnr,
-					})
-				end,
-			})
-		end
-	end,
 })
