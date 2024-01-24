@@ -88,11 +88,13 @@ local plugins = {
 	"neovim/nvim-lspconfig", -- easily configure language servers
 	"hrsh7th/cmp-nvim-lsp", -- for autocompletion
 	{
-		"glepnir/lspsaga.nvim",
-		branch = "main",
+		"nvimdev/lspsaga.nvim",
+        config = function()
+            require('lspsaga').setup({})
+        end,
 		requires = {
-			{ "nvim-tree/nvim-web-devicons" },
-			{ "nvim-treesitter/nvim-treesitter" },
+			 "nvim-tree/nvim-web-devicons" ,
+			 "nvim-treesitter/nvim-treesitter" ,
 		},
 	},
     -- enhanced lsp uis
