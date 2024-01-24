@@ -1,5 +1,6 @@
 require("kpm.set")
 require("kpm.remap")
+require("kpm.lazy")
 
 local augroup = vim.api.nvim_create_augroup
 local kpm = augroup("kpm", {})

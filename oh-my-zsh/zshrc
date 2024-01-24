@@ -230,3 +230,16 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 alias adb='/Users/$USER/Library/Android/sdk/platform-tools/adb'
+
+# bun completions
+[ -s "/Users/kyle/.bun/_bun" ] && source "/Users/kyle/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
