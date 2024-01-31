@@ -119,17 +119,17 @@ local plugins = {
 	"tpope/vim-surround", -- Wrap Things
 	-- Git
 	"tpope/vim-fugitive",
-    {
-		"pwntester/octo.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			{ "nvim-telescope/telescope.nvim", tag = "0.1.4"},
-			"kyazdani42/nvim-web-devicons",
-		},
-		config = function()
-			require("octo").setup()
-		end,
-	},
+ --    {
+	-- 	"pwntester/octo.nvim",
+	-- 	requires = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		{ "nvim-telescope/telescope.nvim", tag = "0.1.4"},
+	-- 		"kyazdani42/nvim-web-devicons",
+	-- 	},
+	-- 	config = function()
+	-- 		require("octo").setup()
+	-- 	end,
+	-- },
 	{
 		"petertriho/cmp-git",
 		requires = {
