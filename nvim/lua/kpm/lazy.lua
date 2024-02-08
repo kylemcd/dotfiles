@@ -145,6 +145,12 @@ local plugins = {
 	-- 	end,
 	-- },
 	{
+		"nvim-pack/nvim-spectre",
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
+	{
 		"petertriho/cmp-git",
 		requires = {
 			"nvim-lua/plenary.nvim",
