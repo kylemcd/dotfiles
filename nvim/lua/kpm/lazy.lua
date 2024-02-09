@@ -26,13 +26,21 @@ local plugins = {
 	"nvim-treesitter/playground",
 	-- Visuals
 	{
-		"oxfist/night-owl.nvim",
+		"datsfilipe/vesper.nvim",
 		config = function()
-			require("night-owl").setup({
-				vim.cmd("colorscheme night-owl"),
+			require("vesper").setup({
+				vim.cmd("colorscheme vesper"),
 			})
 		end,
 	},
+	-- {
+	-- 	"oxfist/night-owl.nvim",
+	-- 	config = function()
+	-- 		require("night-owl").setup({
+	-- 			vim.cmd("colorscheme night-owl"),
+	-- 		})
+	-- 	end,
+	-- },
 	"nvim-tree/nvim-web-devicons",
 	"nvim-lualine/lualine.nvim",
 	-- LSP
