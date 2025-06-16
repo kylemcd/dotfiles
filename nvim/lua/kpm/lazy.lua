@@ -75,35 +75,45 @@ local plugins = {
 		tag = "legacy",
 	},
 	{
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v1.x",
-		dependencies = {
-			-- LSP Support
-			"neovim/nvim-lspconfig",
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-
-			-- Autocompletion
-			"hrsh7th/nvim-cmp",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-			"saadparwaiz1/cmp_luasnip",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-nvim-lua",
-
-			-- Snippgitsignsets
-			"L3MON4D3/LuaSnip",
-			"rafamadriz/friendly-snippets",
-
-			-- Make TS Errors not cut off
-			{
-				"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-				config = function()
-					require("lsp_lines").setup()
-				end,
-			},
-		},
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
 	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = { "williamboman/mason.nvim" },
+	},
+	-- {
+	-- 	"VonHeikemen/lsp-zero.nvim",
+	-- 	branch = "v1.x",
+	-- 	dependencies = {
+	-- 		-- LSP Support
+	-- 		"neovim/nvim-lspconfig",
+	-- 		"williamboman/mason.nvim",
+	-- 		"williamboman/mason-lspconfig.nvim",
+
+	-- 		-- Autocompletion
+	-- 		"hrsh7th/nvim-cmp",
+	-- 		"hrsh7th/cmp-buffer",
+	-- 		"hrsh7th/cmp-path",
+	-- 		"saadparwaiz1/cmp_luasnip",
+	-- 		"hrsh7th/cmp-nvim-lsp",
+	-- 		"hrsh7th/cmp-nvim-lua",
+
+	-- 		-- Snippgitsignsets
+	-- 		"L3MON4D3/LuaSnip",
+	-- 		"rafamadriz/friendly-snippets",
+
+	-- 		-- Make TS Errors not cut off
+	-- 		{
+	-- 			"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+	-- 			config = function()
+	-- 				require("lsp_lines").setup()
+	-- 			end,
+	-- 		},
+	-- 	},
+	-- },
 	-- TODO: Prune these
 	"williamboman/mason.nvim", -- in charge of managing lsp servers, linters & formatters
 	"williamboman/mason-lspconfig.nvim", -- bridges gap b/w mason & lspconfig
@@ -121,8 +131,7 @@ local plugins = {
 	},
 	-- enhanced lsp uis
 	"onsails/lspkind.nvim", -- VS code like pictograms
-	"jose-elias-alvarez/null-ls.nvim", -- configure formatters & linters
-	"jayp0521/mason-null-ls.nvim", -- bridges gap b/w mason & null-ls
+	"nvimtools/none-ls.nvim",
 	-- Autocompletion
 	"hrsh7th/nvim-cmp", -- completion plugin
 	"hrsh7th/cmp-buffer", -- source for text in buffer
@@ -137,7 +146,7 @@ local plugins = {
 	"folke/zen-mode.nvim", -- Focus one pane
 	"github/copilot.vim", -- AI Autocomplete
 	"jose-elias-alvarez/typescript.nvim", -- additional functionality for typescript server (e.g. rename file & update imports)
-	"MunifTanjim/prettier.nvim", -- Formatter
+	-- "MunifTanjim/prettier.nvim", -- Formatter
 	"tpope/vim-surround", -- Wrap Things
 	-- Git
 	"tpope/vim-fugitive",
