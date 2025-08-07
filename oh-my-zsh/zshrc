@@ -172,18 +172,12 @@ eval "$(zoxide init zsh)"
 # tmuxinator
 export EDITOR='vim'
 
-# tmuxinator work
-alias fn="tmuxinator start foxtrot-next"
-alias bb="tmuxinator start backbone-client"
-alias qs="tmuxinator start quickstep"
+# graphite
+alias gta="gt add ."
+alias gtc="gt modify --commit -m $*"
+alias gts="gt submit"
+alias gtcs="gt modify --commit -m $* && gt submit"
 
-# tmuxinator personal
-alias ps="tmuxinator start personal-site"
-alias css="tmuxinator start interunit-css"
-
-# deploy
-alias fndep="cd ~/Projects/foxtrot-next && gh workflow run 54226109"
-alias fndepsil="cd ~/Projects/foxtrot-next && gh workflow run 54323308"
 
 export PATH=$PATH:$HOME/.maestro/bin
 export GPG_TTY=$(tty)
