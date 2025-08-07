@@ -174,9 +174,13 @@ export EDITOR='vim'
 
 # graphite
 alias gta="gt add ."
-alias gtc="gt modify --commit -m $*"
+gtc() {
+    gt modify --commit -m "$*"
+}
 alias gts="gt submit"
-alias gtcs="gt modify --commit -m $* && gt submit"
+gtcs() {
+    gt modify --commit -m "$*" && gt submit
+}
 
 
 export PATH=$PATH:$HOME/.maestro/bin
